@@ -1,0 +1,169 @@
+.person{
+    margin:0 0 0 0;
+    width:50vmin;
+    height:20vmin;
+}
+
+.person-frame{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+    height:35vmin;
+}
+
+.vert-range{
+    position:absolute;
+    margin:-24vmin 0 0 0;
+    right:55vw;
+    transform: rotate(270deg);
+    width:50vmin;
+}
+
+.hor-range{
+    position:absolute;
+    width:50vmin;
+    left:50%;
+    margin:5vmin 0 0 0;
+    transform:translate(-50%);
+}
+
+.silhouette-button{
+    position: absolute;
+    right: 1vw;
+    bottom: 12vh;
+    width:22vmin;
+    height:9vmin;
+    font-size:3vmin;
+    border-radius: 10%;
+    border:solid .5vmin #878787;
+    background-color: #B3B2B2;
+    text-align:center;
+    color:white;
+}
+
+.silhouette-button:active{
+    background-color: #575757;
+}
+
+.explicit-question-text{
+    position:absolute;
+    width:75%;
+    top:10vh;
+    left:50%;
+    transform: translate(-50%);
+}
+
+.feedback{
+    font-size:5vmin;
+    text-shadow: .3vmin .3vmin black;
+    color:black;
+    text-align: center;
+    margin:0;
+    width:50vmin;
+    height:20vmin;
+}
+
+/* below is from: https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html */
+
+input[type=range]::-ms-track {
+    width: 60vmin;
+    height: 10vmin;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 1vmin 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #B3B2B2;
+    border-radius: 1vmin;
+}
+input[type=range]::-ms-fill-upper {
+    background: #878787;
+    border-radius: 1vmin;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 2vmin;
+    width: 2vmin;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #B3B2B2;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #B3B2B2;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 60vmin;
+    height: 2vmin;
+    background: #B3B2B2;
+    border: none;
+    border-radius: 5%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 4vmin;
+    width: 4vmin;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -1vmin;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #575757;
+}
+
+input[type=range]{
+    /* fix for FF unable to apply focus style bug  */
+    border: .3vmin solid #878787; 
+    border-radius: 5%;
+
+    /*required for proper track sizing in FF*/
+    width: 60vmin;
+}
+
+input[type=range]::-moz-range-track {
+    width: 60vmin;
+    height: 2vmin;
+    background: #B3B2B2;
+    border: none;
+    border-radius: 0;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 4vmin;
+    width: 4vmin;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1vmin solid #878787;
+    outline-offset: -1vmin;
+}
+
+input[type=range]:focus::-moz-range-track {
+    background: #575757;
+}

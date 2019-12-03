@@ -1,0 +1,55 @@
+.footer{
+    height: 10vh;
+    background-color: #B3B2B2;
+    border: solid .5vh #878787;
+    border-radius: 2%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 3vmin;
+    color:gold
+}
+
+.results-adjusted-footer{
+  font-size:2vmin;
+}
+
+.feedback{
+    margin: 1vmin;
+    width: 2vmin;
+    height: 2vmin;
+}
+
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 4vmin solid transparent;
+    border-bottom: 4vmin solid transparent;
+    border-left: 4vmin solid green;
+  }
+
+.arrow-right:hover {
+    border-left: 4vmin solid darkolivegreen;
+  }
+
+.legend-box{
+    width:3vw;
+    height:3vh;
+    border:.5vmin .5vmin black;
+    margin:0;
+}
+
+.legend{
+    display: flex;
+    justify-content: center;
+    bottom:4.5vh;
+    right:3vmin;
+    text-align:center;
+    font-size:2vmin;
+    color:white;
+}
+
+.feedback-forms{
+  margin:1vmin 0 1vmin 1vmin;
+
+}

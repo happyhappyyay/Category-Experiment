@@ -1,0 +1,43 @@
+.island1{
+    width:20vmin;
+    height:20vmin;
+    margin:1vmin 1vmin;
+    border-radius: 50%;
+    background-color: #AA8439;
+}
+
+.island1:hover{
+    color:white;
+    background-color:#AA7139;
+}
+
+.island2{
+    width:20vmin;
+    height:20vmin;
+    margin: 0 1vmin 1vmin auto;
+    border-radius: 50%;
+    background-color:#AA7139;
+}
+
+.island2:hover{
+    color:white;
+    background-color: #804A16;
+}
+
+.island1-text{
+    font-size:5vmin;
+    margin-left:2vmin;
+    margin-top:19vmin;
+    text-align:center;
+}
+
+.island2-text{
+    font-size:5vmin;
+    margin-top:-7vmin;
+    text-align:center;
+}
+
+.gone{
+    width:0;
+    height:0;
+}

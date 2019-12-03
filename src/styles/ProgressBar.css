@@ -1,0 +1,32 @@
+.prog{
+    margin: 1vmin 0px 1vmin 1vmin;
+    display: flex;
+}
+
+.green-boxes{
+    width: .5vmin;
+    background-color: green;
+    margin: 0px .20vmin 0px 0px;
+}
+
+.blue-boxes{
+    width: .5vmin;
+    background-color: blue;
+    margin: 0px .20vmin 0px 0px;
+}
+
+.prog-bar{
+    margin: 8.5px 10px 5px 10px;
+}
+
+.header-progress-text{
+    font-size: 2vmin;
+    width: 16vmin;
+    margin-right:1vmin;
+}
+
+.progress-percent{
+    font-size: 2vmin;
+    margin-left:auto;
+    margin-right: 1vmin;
+}

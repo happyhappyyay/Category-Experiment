@@ -1,0 +1,20 @@
+.header{
+    font-size: calc(1vmin + 2px);
+    height: 10vh;
+    background-color: #B3B2B2;
+    border: solid .5vh #878787;
+    border-radius: 2%;
+}
+
+.trials{
+    display: flex;
+    flex-direction: column;
+    color:#ffffff;                               
+}
+
+h1{
+    font-size: 4vmin;
+    color: white;
+    text-align: center;
+    text-shadow: goldenrod 1vmin .5vmin 1vmin;
+}

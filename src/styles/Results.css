@@ -1,0 +1,63 @@
+h2{
+    margin-top:.5vmin;
+    font-size: 3vmin;
+    color: white;
+    text-align: center;
+    text-shadow: goldenrod 1vmin .5vmin 1vmin;
+}
+
+h3{
+    color:gold;
+    font-size:2vmin;
+    text-align:center;
+}
+
+p {
+    text-align:center;
+    justify-self: flex-end;
+    margin:0;
+}
+
+hr{
+    margin:0 auto;
+    border: none;
+    background-color: #ccc;
+    color: #ccc;
+    height: .25vh;
+    width:80%;
+}
+
+.results{
+    height:77vh;
+    background-color: rgb(30, 57, 99);
+    font-size:1.5vmin;
+}
+
+.results-flex{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.flex-grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 22%;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row{
+    display:flex;
+}
+
+.center-silhouette{
+    display:block;
+    margin: 0px auto;
+  }
