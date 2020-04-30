@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/DisplayItem.css';
-import silhouette from '../silhouette.svg'; 
+import './displayItem.css';
+import silhouette from '../../images/silhouette.svg'; 
 import {WIDTH_MEASURE, HEIGHT_MEASURE, MAX_HEIGHT, MIN_HEIGHT,
-MIN_WIDTH, MAX_WIDTH} from '../helpers/IslanderLogic';
-import * as Phases from '../helpers/phases';
+MIN_WIDTH, MAX_WIDTH} from '../../helpers/IslanderLogic';
+import * as Phases from '../../helpers/phases';
 
 class DisplayItem extends React.Component{
     constructor(props){
@@ -66,14 +66,41 @@ class DisplayItem extends React.Component{
                 {checkImplicit()? <div></div>:<div><h2 className="explicit-question-text">{question()}</h2>
                     </div>}
                 <div className="person-frame">
-                    <img className="person" style={personSize} src={silhouette}
-                    alt="silhouette"></img>
+                    <img 
+                        className="person" 
+                        style={personSize} 
+                        src={silhouette}
+                        alt="silhouette"> 
+                    </img>
                 </div>
                 {checkImplicit()? <div></div>:
                 <div>
-                    <input type="range" className="vert-range" min={MIN_HEIGHT - 5} max={MAX_HEIGHT+5} id="heightRange" value={this.state.height} onChange={this.adjustHeight}></input>
-                    <input type="range" className="hor-range" min={MIN_WIDTH - 5} max={MAX_WIDTH+5} id="widthRange" value={this.state.width} onChange={this.adjustWidth}></input>
-                    <button className="silhouette-button" onClick={this.onButtonClick}>Submit</button>
+                    <input 
+                        type="range" 
+                        className="vert-range" 
+                        min={MIN_HEIGHT - 5} 
+                        max={MAX_HEIGHT+5} 
+                        id="heightRange" 
+                        value={this.state.height} 
+                        onChange={this.adjustHeight}
+                    >
+                    </input>
+                    <input 
+                        type="range" 
+                        className="hor-range" 
+                        min={MIN_WIDTH - 5} 
+                        max={MAX_WIDTH+5} 
+                        id="widthRange" 
+                        value={this.state.width} 
+                        onChange={this.adjustWidth}
+                    >
+                    </input>
+                    <button 
+                        className="silhouette-button" 
+                        onClick={this.onButtonClick}
+                    >
+                        Submit
+                    </button>
                 </div>}
             </div>
         );

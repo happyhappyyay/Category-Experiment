@@ -1,9 +1,9 @@
-import React from 'react';
+import React from '../../../node_modules/react'
 import {WIDTH_MEASURE, MAX_HEIGHT, MIN_HEIGHT, MIN_WIDTH, MAX_WIDTH} 
-from './IslanderLogic';
-import silhouette from '../silhouette.svg';
-import addSilhouette from '../silhouette-add.svg';
-import removeSilhouette from '../silhouette-remove.svg'; 
+from '../../helpers/IslanderLogic'
+import silhouette from '../../images/silhouette.svg'
+import addSilhouette from '../../images/silhouette-add.svg';
+import removeSilhouette from '../../images/silhouette-remove.svg'; 
 
 const WIDTH_DIF = (MAX_WIDTH - MIN_WIDTH)/2;
 const HEIGHT_DIF = (MAX_HEIGHT - MIN_HEIGHT)/2;
@@ -43,46 +43,46 @@ class ResultsParser {
         <div className="results-flex">
             <div className="flex-grid">
                 <div className="flex-coloumn">
-                <h3>First Phase- Island 1</h3>
-                {this.addSilhouetteImage(island1Cat,p1Island1Avg,dimension)}
+                    <h3>First Phase- Island 1</h3>
+                    {this.addSilhouetteImage(island1Cat,p1Island1Avg,dimension)}
                 </div>
                 <div className="flex-coloumn">
-                <h3>Second Phase- Island 1</h3>
-                {this.addSilhouetteImage(island1Cat,p2Island1Avg,dimension)}
+                    <h3>Second Phase- Island 1</h3>
+                    {this.addSilhouetteImage(island1Cat,p2Island1Avg,dimension)}
                 </div>
                 <div className="flex-coloumn">
-                <h3>First Choice- Island 1</h3>
-                {this.addSilhouetteImage(island1Cat,exp1Island1,dimension)}
+                    <h3>First Choice- Island 1</h3>
+                    {this.addSilhouetteImage(island1Cat,exp1Island1,dimension)}
                 </div>
                 <div className="flex-coloumn">
-                <h3>Second Choice- Island 1</h3>
-                {this.addSilhouetteImage(island1Cat,exp2Island1,dimension)}      
+                    <h3>Second Choice- Island 1</h3>
+                    {this.addSilhouetteImage(island1Cat,exp2Island1,dimension)}      
                 </div>
                 <div className="flex-coloumn">
-                <h3>Island 1 Average</h3>
-                {this.addComparisonImage(island1Cat,dimension)} 
+                    <h3>Island 1 Average</h3>
+                    {this.addComparisonImage(island1Cat,dimension)} 
                 </div>
             </div>
             <div className="flex-grid">
                 <div className="flex-coloumn">
-                <h3>First Phase- Island 2</h3>
-                {this.addSilhouetteImage(island2Cat,p1Island2Avg,dimension)}
+                    <h3>First Phase- Island 2</h3>
+                    {this.addSilhouetteImage(island2Cat,p1Island2Avg,dimension)}
                 </div>
                 <div className="flex-coloumn">
-                <h3>Second Phase- Island 2</h3>
-                {this.addSilhouetteImage(island2Cat,p2Island2Avg,dimension)}
+                    <h3>Second Phase- Island 2</h3>
+                    {this.addSilhouetteImage(island2Cat,p2Island2Avg,dimension)}
                 </div>
                 <div className="flex-coloumn">
-                <h3>First Choice- Island 2</h3>
-                {this.addSilhouetteImage(island2Cat,exp1Island2,dimension)}
+                    <h3>First Choice- Island 2</h3>
+                    {this.addSilhouetteImage(island2Cat,exp1Island2,dimension)}
                 </div>
                 <div className="flex-coloumn">
-                <h3>Second Choice- Island 2</h3>
-                {this.addSilhouetteImage(island2Cat,exp2Island2,dimension)}
+                    <h3>Second Choice- Island 2</h3>
+                    {this.addSilhouetteImage(island2Cat,exp2Island2,dimension)}
                 </div>
                 <div className="flex-coloumn">
-                <h3>Island 2 Average</h3>
-                {this.addComparisonImage(island2Cat,dimension)} 
+                    <h3>Island 2 Average</h3>
+                    {this.addComparisonImage(island2Cat,dimension)} 
                 </div>                
             </div>
             <div className="flex-grid">
@@ -134,9 +134,15 @@ class ResultsParser {
         const dimText = dimension===WIDTH_MEASURE? " wide": " tall";
 
         return <div className="results-flex">
-                <img className="center-silhouette" style={size} src={silhouetteImg}
-        alt="silhouette"></img>
-        <p>{selectedSize + dimText} / {defaultSize + dimText}</p>
+                <img 
+                    className="center-silhouette" 
+                    style={size} 
+                    src={silhouetteImg}
+                    alt="silhouette">
+                </img>
+                <p>
+                    {selectedSize + dimText} / {defaultSize + dimText}
+                </p>
             </div>
         ;
     }
@@ -155,9 +161,15 @@ class ResultsParser {
         const dimText = dimension===WIDTH_MEASURE? " wide": " tall";
 
         return <div className="results-flex">
-                <img className="center-silhouette" style={avgSize} src={silhouette}
-        alt="silhouette"></img>
-        <p>{defaultSize + dimText}</p>
+                <img 
+                    className="center-silhouette" 
+                    style={avgSize} 
+                    src={silhouette}
+                    alt="silhouette">
+                </img>
+                <p>
+                    {defaultSize + dimText}
+                </p>
             </div>
         ;
     }
@@ -165,7 +177,6 @@ class ResultsParser {
     haslargerSilhouette(silhouette1Size, silhouette2Size){
         return silhouette1Size > silhouette2Size;
     }
-
 }
 
 export default ResultsParser;

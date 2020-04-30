@@ -1,4 +1,4 @@
-import ResultsParser from '../../helpers/ResultsParser';
+import ResultsParser from './resultsParser';
 
 describe('Results Parser',()=>{
     let parser = new ResultsParser();

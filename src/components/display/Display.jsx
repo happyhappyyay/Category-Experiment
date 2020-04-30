@@ -1,12 +1,12 @@
 import React from 'react';
-import Island from './Island';
-import DisplayItem from './DisplayItem';
-import IslanderLogic from '../helpers/IslanderLogic';
-import '../styles/Display.css';
-import * as Phases from '../helpers/phases';
-import {EXPLICIT_TRIALS, PHASE_TRIALS} from '../helpers/ProgCalc';
-import {ISLAND_1, ISLAND_2, WIDTH_MEASURE, HEIGHT_MEASURE} from '../helpers/IslanderLogic';
-import FeedbackHelper from '../helpers/FeedbackHelper';
+import Island from '../island/Island';
+import DisplayItem from '../displayItem/DisplayItem';
+import IslanderLogic from '../../helpers/IslanderLogic';
+import './display.css';
+import * as Phases from '../../helpers/phases';
+import {EXPLICIT_TRIALS, PHASE_TRIALS} from '../progressBar/progCalc';
+import {ISLAND_1, ISLAND_2, WIDTH_MEASURE, HEIGHT_MEASURE} from '../../helpers/IslanderLogic';
+import FeedbackHelper from './feedbackHelper';
 
 class Display extends React.Component {
     constructor(props){
@@ -169,12 +169,33 @@ class Display extends React.Component {
         return (
             <div>
                 <div className="display">
-                    <Island island={0} stage={this.props.stage} update={this.updateImplicit}/>
-                    {this.state.giveFeedback? <div className="person-frame"><div className="feedback" style={{color:this.feedbackHelper.getFeedbackColor()}}>
-                        {this.feedbackHelper.getFeedbackColor() === "green"? "correct":"incorrect"}</div></div>:
-                    <DisplayItem stage = {this.props.stage} trial={this.props.trial} properties={this.updateIslander()} 
-                    update={this.updateExplicit} correct={this.correct} feedbackAmount={this.props.feedbackAmount}/>}
-                    <Island island={1} stage={this.props.stage} update={this.updateImplicit}/>
+                    <Island 
+                        island={0} 
+                        stage={this.props.stage} 
+                        update={this.updateImplicit}
+                    />
+                        {this.state.giveFeedback? 
+                    <div className="person-frame">
+                        <div 
+                            className="feedback" 
+                            style={{color:this.feedbackHelper.getFeedbackColor()}}
+                            >
+                            {this.feedbackHelper.getFeedbackColor() === "green"? "correct":"incorrect"}
+                        </div>
+                    </div>:
+                    <DisplayItem 
+                        stage = {this.props.stage} 
+                        trial={this.props.trial} 
+                        properties={this.updateIslander()} 
+                        update={this.updateExplicit} 
+                        correct={this.correct} 
+                        feedbackAmount={this.props.feedbackAmount}
+                    />}
+                    <Island 
+                        island={1} 
+                        stage={this.props.stage} 
+                        update={this.updateImplicit}
+                    />
                 </div>
             </div>
         );

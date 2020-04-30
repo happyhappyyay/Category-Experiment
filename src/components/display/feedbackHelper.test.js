@@ -1,4 +1,4 @@
-import FeedbackHelper from '../../helpers/FeedbackHelper';
+import FeedbackHelper from './feedbackHelper';
 import * as Feedback from '../../helpers/feedback';
 
 describe('Feedback Helper', () => {

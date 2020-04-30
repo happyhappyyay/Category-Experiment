@@ -1,6 +1,6 @@
 import React from 'react';
-import Frame from './components/Frame';
-import './App.css';
+import Frame from '../frame/Frame.jsx';
+import './app.css';
 
 function App() {
   return (

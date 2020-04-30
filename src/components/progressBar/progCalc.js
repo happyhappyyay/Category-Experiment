@@ -1,4 +1,4 @@
-import * as Phases from './phases';
+import * as Phases from '../../helpers/phases';
 
 export const PHASE_TRIALS = 100;
 export const EXPLICIT_TRIALS = 9;

@@ -1,5 +1,5 @@
-import IslanderLogic, { MIN_WIDTH, MIN_HEIGHT, MAX_HEIGHT, MAX_WIDTH } from '../../helpers/IslanderLogic';
-import {PHASE_1, EXPLICIT_3, RESULTS} from '../../helpers/phases';
+import IslanderLogic, { MIN_WIDTH, MIN_HEIGHT, MAX_HEIGHT, MAX_WIDTH } from './IslanderLogic';
+import {PHASE_1, EXPLICIT_3, RESULTS} from './phases';
 
 describe('Islander Logic', ()=>{
     let logic = new IslanderLogic();

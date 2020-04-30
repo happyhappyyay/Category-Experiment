@@ -1,4 +1,4 @@
-import {FALSE} from './feedback' 
+import {FALSE} from '../../helpers/feedback' 
 
 class FeedbackHelper {
 

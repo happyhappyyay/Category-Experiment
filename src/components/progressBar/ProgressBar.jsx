@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/ProgressBar.css';
-import ProgCalc from '../helpers/ProgCalc';
+import './progressBar.css';
+import ProgCalc from './progCalc';
 
 const ProgressBar = (props) => {
     let calc = new ProgCalc();
@@ -19,8 +19,9 @@ const ProgressBar = (props) => {
 
     return (
         <div className="prog">
-            <div className = "header-progress-text">{props.overall === true? 
-                "Overall Progess:":"Current Progress:"}</div> 
+            <div className = "header-progress-text">
+                {props.overall === true? "Overall Progess:":"Current Progress:"}
+            </div> 
             {progBoxes}
             <div className="progress-percent">{prog}%</div>
         </div>

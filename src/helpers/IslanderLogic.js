@@ -1,4 +1,4 @@
-import * as Phases from '../helpers/phases';
+import * as Phases from './phases';
 
 export const MIN_WIDTH = 8;
 export const MAX_WIDTH = 50;

@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/Results.css';
-import ResultsParser from '../helpers/ResultsParser';
+import './results.css';
+import ResultsParser from './resultsParser';
 
 const Results = (props) =>{
     const parser = new ResultsParser();

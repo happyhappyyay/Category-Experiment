@@ -1,4 +1,4 @@
-import ProgCalc, {PHASE_TRIALS, EXPLICIT_TRIALS} from '../../helpers/ProgCalc';
+import ProgCalc, {PHASE_TRIALS, EXPLICIT_TRIALS} from './progCalc';
 import * as Phases from '../../helpers/phases';
 
 describe('Prog Calc',()=>{
