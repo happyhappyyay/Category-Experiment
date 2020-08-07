@@ -1,4 +1,4 @@
-.island1{
+.Island1{
     width:20vmin;
     height:20vmin;
     margin:1vmin 1vmin;
@@ -6,12 +6,12 @@
     background-color: #AA8439;
 }
 
-.island1:hover{
+.Island1:hover{
     color:white;
     background-color:#AA7139;
 }
 
-.island2{
+.Island2{
     width:20vmin;
     height:20vmin;
     margin: 0 1vmin 1vmin auto;
@@ -19,25 +19,25 @@
     background-color:#AA7139;
 }
 
-.island2:hover{
+.Island2:hover{
     color:white;
     background-color: #804A16;
 }
 
-.island1-text{
+.Island1-text{
     font-size:5vmin;
     margin-left:2vmin;
     margin-top:19vmin;
     text-align:center;
 }
 
-.island2-text{
+.Island2-text{
     font-size:5vmin;
     margin-top:-7vmin;
     text-align:center;
 }
 
-.gone{
+.Island-gone{
     width:0;
     height:0;
 }

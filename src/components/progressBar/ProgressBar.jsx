@@ -1,14 +1,14 @@
 import React from 'react';
-import './progressBar.css';
+import './ProgressBar.css';
 import ProgCalc from './progCalc';
 
-const ProgressBar = (props) => {
+const ProgressBar = ({overall, stage, trial}) => {
     let calc = new ProgCalc();
-    let prog = props.overall === true? calc.calculateOverallProgress(props.stage, props.trial):
-    calc.calulateCurrentProgress(props.stage, props.trial);
+    let prog = overall === true? calc.calculateOverallProgress(stage, trial):
+    calc.calulateCurrentProgress(stage, trial);
 
-    let boxColor = props.overall === true? "green-boxes":"blue-boxes";
-    
+    let boxColor = overall === true? "green-boxes":"blue-boxes";
+    // TODO: 
     // need keys?
     let progBox = <div className={boxColor}></div>;
     let progBoxes = [];
@@ -20,7 +20,7 @@ const ProgressBar = (props) => {
     return (
         <div className="prog">
             <div className = "header-progress-text">
-                {props.overall === true? "Overall Progess:":"Current Progress:"}
+                {overall === true? "Overall Progess:":"Current Progress:"}
             </div> 
             {progBoxes}
             <div className="progress-percent">{prog}%</div>

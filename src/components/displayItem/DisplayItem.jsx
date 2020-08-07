@@ -1,5 +1,5 @@
 import React from 'react';
-import './displayItem.css';
+import './DisplayItem.css';
 import silhouette from '../../images/silhouette.svg'; 
 import {WIDTH_MEASURE, HEIGHT_MEASURE, MAX_HEIGHT, MIN_HEIGHT,
 MIN_WIDTH, MAX_WIDTH} from '../../helpers/IslanderLogic';
@@ -35,8 +35,9 @@ class DisplayItem extends React.Component{
     }
 
     render(){
+        const { stage, trial, properties } = this.props;
         const question = () => {
-            switch(this.props.trial){
+            switch(trial){
                 case 0:
                     return "Please, create the silhouette most representative of Island 1."
                 case 1:
@@ -47,9 +48,8 @@ class DisplayItem extends React.Component{
                     return "Please create the most repesentative silhouette."
             }
         }
-        let personAttributes = this.props.properties;
+        let personAttributes = properties;
         const checkImplicit = () =>{
-            let stage = this.props.stage;
             return !(stage === Phases.EXPLICIT_1 | stage === Phases.EXPLICIT_2 | stage === Phases.EXPLICIT_3);
         }
         let personSize = checkImplicit()? {
@@ -63,11 +63,11 @@ class DisplayItem extends React.Component{
         };
         return (
             <div>
-                {checkImplicit()? <div></div>:<div><h2 className="explicit-question-text">{question()}</h2>
+                {checkImplicit()? <div></div>:<div><h2 className="DisplayItem-explicit-text">{question()}</h2>
                     </div>}
-                <div className="person-frame">
+                <div className="DisplayItem-silhouette-container">
                     <img 
-                        className="person" 
+                        className="DisplayItem-silhouette" 
                         style={personSize} 
                         src={silhouette}
                         alt="silhouette"> 
@@ -77,7 +77,7 @@ class DisplayItem extends React.Component{
                 <div>
                     <input 
                         type="range" 
-                        className="vert-range" 
+                        className="DisplayItem-vert-range" 
                         min={MIN_HEIGHT - 5} 
                         max={MAX_HEIGHT+5} 
                         id="heightRange" 
@@ -87,7 +87,7 @@ class DisplayItem extends React.Component{
                     </input>
                     <input 
                         type="range" 
-                        className="hor-range" 
+                        className="DisplayItem-hor-range" 
                         min={MIN_WIDTH - 5} 
                         max={MAX_WIDTH+5} 
                         id="widthRange" 
@@ -96,7 +96,7 @@ class DisplayItem extends React.Component{
                     >
                     </input>
                     <button 
-                        className="silhouette-button" 
+                        className="DisplayItem-button" 
                         onClick={this.onButtonClick}
                     >
                         Submit

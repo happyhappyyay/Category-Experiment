@@ -1,12 +1,12 @@
 import React from 'react';
-import './results.css';
+import './Results.css';
 import ResultsParser from './resultsParser';
 
-const Results = (props) =>{
+const Results = ({ results }) =>{
     const parser = new ResultsParser();
-    const resultsContent = parser.parseResults(props.results);
+    const resultsContent = parser.parseResults(results);
     return (
-        <div className="results">
+        <div className="Results-container">
             <h2>Results (selection/correct)</h2>
             <hr></hr>
             {resultsContent}

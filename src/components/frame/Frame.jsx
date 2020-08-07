@@ -1,10 +1,12 @@
 import React from 'react';
-import Display from '../display/Display';
-import Header from '../header/Header';
-import Footer from '../footer/Footer';
-import Explanation from '../explanation/Explanation';
+import Display from '../Display/Display';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import Explanation from '../Explanation/Explanation';
 import * as Phases from '../../helpers/phases'; 
 import * as Feedback from '../../helpers/feedback';
+
+import './Frame.css';
 
 class Frame extends React.Component {
     constructor(){
@@ -61,32 +63,33 @@ class Frame extends React.Component {
     }
   
       render(){
+        const { trial, stage, amountFeedback, typeFeedback, dimension, results } = this.state;
         return (
               <div>
                 <Header 
-                  trial={this.state.trial} 
-                  stage={this.state.stage}
+                  trial={trial} 
+                  stage={stage}
                 />
-                {this.state.stage !== Phases.INTRODUCTION &
-                this.state.stage !== Phases.RESULTS?
+                {stage !== Phases.INTRODUCTION &
+                stage !== Phases.RESULTS?
                 <Display 
-                  stage = {this.state.stage} 
+                  stage = {stage} 
                   updateResults={this.updateResults} 
                   updateTrial={this.updateTrial} 
                   updateStage={this.updateStage} 
-                  trial={this.state.trial} 
-                  feedbackAmount={this.state.amountFeedback} 
-                  typeFeedback={this.state.typeFeedback}
+                  trial={trial} 
+                  feedbackAmount={amountFeedback} 
+                  typeFeedback={typeFeedback}
                 />
                 :<Explanation 
-                  stage = {this.state.stage} 
-                  typeFeedback = {this.state.typeFeedback} 
-                  amountFeedback = {this.state.amountFeedback} 
-                  dimension={this.state.dimension} 
-                  results={this.state.results}
+                  stage = {stage} 
+                  typeFeedback = {typeFeedback} 
+                  amountFeedback = {amountFeedback} 
+                  dimension={dimension} 
+                  results={results}
                 />}
                 <Footer 
-                  stage = {this.state.stage} 
+                  stage = {stage} 
                   typeFeedback={this.updateTypeFeedback} 
                   amtFeedback={this.updateAmountFeedback} 
                   stageChange={this.updateStage}

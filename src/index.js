@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/app/App.jsx';
+import Frame from './components/Frame/Frame';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Frame />, document.querySelector('#root'));

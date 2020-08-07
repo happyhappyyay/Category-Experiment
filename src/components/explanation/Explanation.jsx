@@ -1,20 +1,20 @@
 import React from 'react';
 import * as Phases from '../../helpers/phases.js';
-import Introduction from '../introduction/Introduction';
-import Results from '../results/Results';
+import Introduction from '../Introduction/Introduction';
+import Results from '../Results/Results';
 
-const Explanation = (props) =>{
+const Explanation = ({ stage, amtFeedback, typeFeedback, dimension, results }) =>{
     return (
-        <div>
-            {props.stage === Phases.INTRODUCTION? 
+        <>
+            {stage === Phases.INTRODUCTION? 
             <Introduction />:
             <Results 
-                amtFeedback = {props.amtFeedback} 
-                typeFeedback = {props.typeFeedback} 
-                dimension = {props.dimension} 
-                results = {props.results}
+                amtFeedback = {amtFeedback} 
+                typeFeedback = {typeFeedback} 
+                dimension = {dimension} 
+                results = {results}
             />}
-        </div>
+        </>
     );
 }
 

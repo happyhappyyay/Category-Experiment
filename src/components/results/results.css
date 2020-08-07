@@ -27,13 +27,13 @@ hr{
     width:80%;
 }
 
-.results{
+.Results-container{
     height:77vh;
     background-color: rgb(30, 57, 99);
     font-size:1.5vmin;
 }
 
-.results-flex{
+.resultsParser-flex-container{
     display: flex;
     flex-direction: column;
     height: 90%;
@@ -41,14 +41,14 @@ hr{
     align-content: space-around;
 }
 
-.flex-grid{
+.resultsParser-phase-row{
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 22%;
 }
 
-.flex-column{
+.resultsParser-result-item{
     display: flex;
     flex-direction: column;
 }
@@ -57,7 +57,7 @@ hr{
     display:flex;
 }
 
-.center-silhouette{
+.resultsParser-silhouette{
     display:block;
     margin: 0px auto;
   }

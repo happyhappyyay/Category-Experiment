@@ -1,4 +1,4 @@
-.footer{
+.Footer-container{
     height: 10vh;
     background-color: #B3B2B2;
     border: solid .5vh #878787;
@@ -10,17 +10,17 @@
     color:gold
 }
 
-.results-adjusted-footer{
+.Footer-results{
   font-size:2vmin;
 }
 
-.feedback{
+.Footer-feedback{
     margin: 1vmin;
     width: 2vmin;
     height: 2vmin;
 }
 
-.arrow-right {
+.Footer-arrow-right {
     width: 0; 
     height: 0; 
     border-top: 4vmin solid transparent;
@@ -28,18 +28,18 @@
     border-left: 4vmin solid green;
   }
 
-.arrow-right:hover {
+.Footer-arrow-right:hover {
     border-left: 4vmin solid darkolivegreen;
   }
 
-.legend-box{
+.Footer-results-legend-box{
     width:3vw;
     height:3vh;
     border:.5vmin .5vmin black;
     margin:0;
 }
 
-.legend{
+.Footer-results-legend{
     display: flex;
     justify-content: center;
     bottom:4.5vh;
@@ -49,7 +49,7 @@
     color:white;
 }
 
-.feedback-forms{
+.Footer-form{
   margin:1vmin 0 1vmin 1vmin;
 
 }

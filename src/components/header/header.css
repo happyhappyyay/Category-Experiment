@@ -1,4 +1,4 @@
-.header{
+.Header-container{
     font-size: calc(1vmin + 2px);
     height: 10vh;
     background-color: #B3B2B2;
@@ -6,7 +6,7 @@
     border-radius: 2%;
 }
 
-.trials{
+.Header-progress{
     display: flex;
     flex-direction: column;
     color:#ffffff;                               

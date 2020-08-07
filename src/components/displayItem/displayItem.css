@@ -1,10 +1,10 @@
-.person{
+.DisplayItem-silhouette{
     margin:0 0 0 0;
     width:50vmin;
     height:20vmin;
 }
 
-.person-frame{
+.DisplayItem-silhouette-container{
     display:flex;
     flex-direction:column;
     justify-content: center;
@@ -13,7 +13,7 @@
     height:35vmin;
 }
 
-.vert-range{
+.DisplayItem-vert-range{
     position:absolute;
     margin:-24vmin 0 0 0;
     right:55vw;
@@ -21,7 +21,7 @@
     width:50vmin;
 }
 
-.hor-range{
+.DisplayItem-hor-range{
     position:absolute;
     width:50vmin;
     left:50%;
@@ -29,7 +29,7 @@
     transform:translate(-50%);
 }
 
-.silhouette-button{
+.DisplayItem-button{
     position: absolute;
     right: 1vw;
     bottom: 12vh;
@@ -43,11 +43,11 @@
     color:white;
 }
 
-.silhouette-button:active{
+.DisplayItem-button:active{
     background-color: #575757;
 }
 
-.explicit-question-text{
+.DisplayItem-explicit-text{
     position:absolute;
     width:75%;
     top:10vh;
@@ -55,7 +55,7 @@
     transform: translate(-50%);
 }
 
-.feedback{
+.DisplayItem-feedback{
     font-size:5vmin;
     text-shadow: .3vmin .3vmin black;
     color:black;

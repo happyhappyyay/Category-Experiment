@@ -1,10 +1,10 @@
 import React from 'react';
-import './introduction.css';
+import './Introduction.css';
 
-const Introduction = (props) => {
+const Introduction = () => {
     return(
-        <div className="introduction">
-            <p className="explanation">
+        <div className="Introduction-container">
+            <p className="Introduction-text">
                 Seymour Scientist mixed up all the health data for two small populations of island people! He needs your help in discerning the difference between 
                 the two, mostly-homogenous, groups. Correctly categorize islanders so that scientists can better develop a more personalized health intervention 
                 for people on the islands. Only the silhouettes of the islanders are presented as to hide their true identities (No Peeking!).

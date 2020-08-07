@@ -1,25 +1,23 @@
 import React from 'react';
-import './header.css';
+import './Header.css';
 import * as Phases from '../../helpers/phases.js';
-import ProgressBar from '../progressBar/ProgressBar.jsx';
+import ProgressBar from '../ProgressBar/ProgressBar.jsx';
 
-const Header = (props) => {
+const Header = ({ stage, trial }) => {
     return(
-        <div className='header'>
-            {props.stage !== Phases.INTRODUCTION &
-            props.stage !== Phases.RESULTS? 
-            <div className="trials">
+        <div className='Header-container'>
+            {stage !== Phases.INTRODUCTION &
+            stage !== Phases.RESULTS? 
+            <div className="Header-progress">
                 <ProgressBar 
                     overall={true} 
-                    stage={props.stage} 
-                    trial={props.trial} 
-                    windowWidth={props.windowWidth}
+                    stage={stage} 
+                    trial={trial} 
                 />
                 <ProgressBar 
                     overall={false} 
-                    stage={props.stage} 
-                    trial={props.trial} 
-                    windowWidth={props.windowWidth}
+                    stage={stage} 
+                    trial={trial} 
                 />
             </div>
             :<h1>Categorization Game (Experiment)</h1>}
