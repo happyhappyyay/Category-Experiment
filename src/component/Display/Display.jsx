@@ -54,7 +54,7 @@ class Display extends React.Component {
 
     updateImplicit(island){
         if(!this.state.giveFeedback){
-            if(this.feedbackHelper.allowFeedback()|this.props.stage===Phases.PHASE_1){
+            if(this.feedbackHelper.allowFeedback()|this.props.stage===Phases.TRAINING){
                 this.feedbackHelper.setupFeedbackColor(island===this.islanderProperties[2]);
                 this.setState({
                     giveFeedback:true
