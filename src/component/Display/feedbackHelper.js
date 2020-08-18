@@ -1,42 +1,38 @@
-import {FALSE} from '../../helpers/feedback' 
+import { FALSE } from '../../helpers/feedback';
 
 class FeedbackHelper {
+  constructor(feedbackAmount, feedbackType) {
+    this.feedbackAmount = feedbackAmount;
+    this.feedbackType = feedbackType === 2 ? FeedbackHelper.createRandomizedFeedbackType() : feedbackType;
+    this.giveFeedback = false;
+    this.color = 'black';
+  }
 
-    constructor(feedbackAmount, feedbackType){
-        this.feedbackAmount = feedbackAmount;
-        this.feedbackType = feedbackType === 2? this.createRandomizedFeedbackType():feedbackType;
-        this.giveFeedback = false;
-        this.color = "black";
+  allowFeedback() {
+    this.giveFeedback = (Math.random() * 100) <= this.feedbackAmount;
+
+    return this.giveFeedback;
+  }
+
+  setupFeedbackColor(correct) {
+    let tempCorrect = correct;
+    if (this.feedbackType === FALSE) {
+      tempCorrect = !correct;
     }
+    this.color = tempCorrect ? 'green' : 'red';
+  }
 
-    allowFeedback(){
-        this.giveFeedback = (Math.random() * 100) <= this.feedbackAmount;
-        console.log(this.giveFeedback,this.feedbackAmount, this.feedbackType);
+  getFeedbackColor() {
+    return this.color;
+  }
 
-        return this.giveFeedback;
-    }
+  static createRandomizedFeedbackType() {
+    return Math.round(Math.random());
+  }
 
-    setupFeedbackColor(correct){
-        if(this.feedbackType === FALSE){
-            correct = !correct;
-        }
-        this.color = correct? "green": "red";
-    }
-
-    getFeedbackColor(){
-        return this.color;
-    }
-
-    createRandomizedFeedbackType(){
-        return Math.round(Math.random());
-    }
-
-    reverseFeedbackType(){
-        this.feedbackType = this.feedbackType === 0?  1:0;
-    }
-
-    
-
+  reverseFeedbackType() {
+    this.feedbackType = this.feedbackType === 0 ? 1 : 0;
+  }
 }
 
 export default FeedbackHelper;

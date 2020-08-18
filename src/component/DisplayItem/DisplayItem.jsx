@@ -34,20 +34,27 @@ class DisplayItem extends React.Component{
         this.props.update(this.state.width, this.state.height);
     }
 
+    selectRepresentativeQuestion = (trial) => {
+        const ISLAND1_REP = "Please, create the silhouette most representative of Island 1.";
+        const ISLAND2_REP = "Please, create the silhouette most representative of Island 2.";
+        const BOUNDARY_REP = "Please, create the silhouette most representative of the boundary between the two islands.";
+        const MOST_REP = "Please create the most repesentative silhouette.";
+        switch(trial){
+            case 0:
+                return ISLAND1_REP;
+            case 1:
+                return ISLAND2_REP;
+            case 2:
+                return BOUNDARY_REP;
+            default:
+                return MOST_REP;
+        }
+    }
+
     render(){
         const { stage, trial, properties } = this.props;
-        const question = () => {
-            switch(trial){
-                case 0:
-                    return "Please, create the silhouette most representative of Island 1."
-                case 1:
-                    return "Please, create the silhouette most representative of Island 2."
-                case 2:
-                    return "Please, create the silhouette most representative of the boundary between the two islands."
-                default:
-                    return "Please create the most repesentative silhouette."
-            }
-        }
+
+        const question = this.selectRepresentativeQuestion(trial);
         let personAttributes = properties;
         const checkImplicit = () =>{
             return !(stage === Phases.EXPLICIT_1 | stage === Phases.EXPLICIT_2 | stage === Phases.EXPLICIT_3);
@@ -63,7 +70,7 @@ class DisplayItem extends React.Component{
         };
         return (
             <div>
-                {checkImplicit()? <div></div>:<div><h2 className="DisplayItem-explicit-text">{question()}</h2>
+                {checkImplicit()? <div></div>:<div><h2 className="DisplayItem-explicit-text">{question}</h2>
                     </div>}
                 <div className="DisplayItem-silhouette-container">
                     <img 

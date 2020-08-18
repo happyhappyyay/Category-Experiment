@@ -3,8 +3,10 @@ import './Island.css'
 import * as Phases from '../../helpers/phases'
 
 const Island = ({ island, stage, update }) => {
+    const ISLAND1 = "Island 1";
+    const ISLAND2 = "Island 2";
+
     const handleClick = () => {
-        console.log("click");
         update(island);
     }
     let islandName = island === 0? 'Island1':'Island2';
@@ -18,7 +20,7 @@ const Island = ({ island, stage, update }) => {
             onClick={checkImplicit()? handleClick:null}
         >
             <div className={islandName+"-text"}>
-                {islandName.includes(1)? "Island 1":"Island 2"}
+                {islandName.includes(1)? ISLAND1:ISLAND2}
             </div>
         </div>
     );

@@ -3,6 +3,19 @@ import './Footer.css';
 import {INTRODUCTION, TRAINING, RESULTS} from '../../helpers/phases';
 
 const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
+    const SUPERVISED = '100%';
+    const SEMI_SUPERVISED_HIGH = '50%';
+    const SEMI_SUPERVISED_LOW = '25%';
+    const UNSUPERVISED = '0%';
+    const TRUE_FEEDBACK = 'True';
+    const FALSE_FEEDBACK = 'False';
+    const RANDOM_FEEDBACK = 'Random';
+    const AMT_FEEDBACK = 'Amount of Feedback';
+    const TYPE_FEEDBACK = 'Type of Feedback';
+    const OVER_EST = 'Over Estimation';
+    const UNDER_EST = 'Under Estimation';
+    const CORRECT_EST = 'Correct Estimation';
+
     let disableInput = stage !== INTRODUCTION;
     const sendFeedbackAmount = () =>{
         let amount = document.querySelector('input[name="amount-feedback"]:checked').value;
@@ -21,7 +34,7 @@ const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
     return(
         <div className={stage===RESULTS? "Footer-container Footer-results":"Footer-container"}>
             <div className="Footer-form">
-                Amount of Feedback
+                {AMT_FEEDBACK}
                 <form style={{color:"white"}}>
                     <input 
                         className="Footer-feedback" 
@@ -33,7 +46,7 @@ const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
                         disabled={disableInput}
                     >
                     </input>
-                        100%
+                        {SUPERVISED}
                     <input 
                         className="Footer-feedback" 
                         type="radio" 
@@ -43,7 +56,7 @@ const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
                         disabled={disableInput}
                     >
                     </input>
-                        50%
+                        {SEMI_SUPERVISED_HIGH}
                     <input 
                         className="Footer-feedback" 
                         type="radio" 
@@ -53,7 +66,7 @@ const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
                         disabled={disableInput}
                     >
                     </input>
-                        25%
+                        {SEMI_SUPERVISED_LOW}
                     <input 
                         className="Footer-feedback" 
                         type="radio" 
@@ -63,11 +76,11 @@ const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
                         disabled={disableInput}
                     >
                     </input>
-                            0%
+                            {UNSUPERVISED}
                 </form>   
             </div>
             <div className="feedback-forms">
-                Type of Feedback
+                {TYPE_FEEDBACK}
                 <form style={{color:"white"}}>
                     <input 
                         className="Footer-feedback" 
@@ -79,7 +92,7 @@ const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
                         disabled={disableInput}
                     >
                     </input>
-                        True
+                        {TRUE_FEEDBACK}
                     <input 
                         className="Footer-feedback" 
                         type="radio" 
@@ -89,7 +102,7 @@ const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
                         disabled={disableInput}
                     >
                     </input>
-                        False
+                        {FALSE_FEEDBACK}
                     <input 
                         className="Footer-feedback" 
                         type="radio" 
@@ -99,7 +112,7 @@ const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
                         disabled={disableInput}
                     >
                     </input>
-                        Random
+                        {RANDOM_FEEDBACK}
                 </form>   
             </div>
             {stage === INTRODUCTION? 
@@ -111,19 +124,19 @@ const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
                     style={{backgroundColor:"green"}}
                 >
                 </div> 
-                    Over Estimation
+                    {OVER_EST}
                 <div 
                     className="Footer-results-legend-box" 
                     style={{backgroundColor:"red"}}
                 >
                 </div> 
-                    Under Estimation
+                    {UNDER_EST}
                 <div 
                     className="Footer-results-legend-box" 
                     style={{backgroundColor:"black"}}
                 >
                 </div> 
-                    Correct Estimation
+                    {CORRECT_EST}
             </div>:null}
         </div>
     );

@@ -35,13 +35,11 @@ class Display extends React.Component {
     }
 
     handleKeyDown(event){
-        if(this.islanderLogic.checkForImplicitPhase(this.props.stage)){
+        if(IslanderLogic.checkForImplicitPhase(this.props.stage)){
             if(event.key === '1'){
-                console.log("press ", event.key);
                 this.updateImplicit(ISLAND_1);
             }
             else if(event.key === '2'){
-                console.log("press", event.key);
                 this.updateImplicit(ISLAND_2);
             }
         }
@@ -167,6 +165,10 @@ class Display extends React.Component {
     }
     render(){
         const { stage, trial } = this.props;
+        const CORRECT_COLOR = "green";
+        const CORRECT = "correct";
+        const INCORRECT = "incorrect";
+
         return (
             <div>
                 <div className="Display-container">
@@ -181,7 +183,7 @@ class Display extends React.Component {
                             className="DisplayItem-feedback" 
                             style={{color:this.feedbackHelper.getFeedbackColor()}}
                             >
-                            {this.feedbackHelper.getFeedbackColor() === "green"? "correct":"incorrect"}
+                            {this.feedbackHelper.getFeedbackColor() === CORRECT_COLOR? CORRECT:INCORRECT}
                         </div>
                     </div>:
                     <DisplayItem 

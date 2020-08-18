@@ -38,7 +38,6 @@ class Frame extends React.Component {
         this.setState({
           trial:newTrial
           });
-      console.log("Stage:", this.state.stage," Trial:",newTrial);
     }
 
     updateAmountFeedback(feedback){
@@ -59,7 +58,6 @@ class Frame extends React.Component {
         results:results,
         dimension: dimension,
       });
-      console.log(results);
     }
   
       render(){
