@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Category-Experiment/static/css/main.ce3783ce.chunk.css",
+    "main.js": "/Category-Experiment/static/js/main.6b51d94d.chunk.js",
+    "main.js.map": "/Category-Experiment/static/js/main.6b51d94d.chunk.js.map",
+    "runtime-main.js": "/Category-Experiment/static/js/runtime-main.0d38d131.js",
+    "runtime-main.js.map": "/Category-Experiment/static/js/runtime-main.0d38d131.js.map",
+    "static/js/2.e2cd6110.chunk.js": "/Category-Experiment/static/js/2.e2cd6110.chunk.js",
+    "static/js/2.e2cd6110.chunk.js.map": "/Category-Experiment/static/js/2.e2cd6110.chunk.js.map",
+    "index.html": "/Category-Experiment/index.html",
+    "precache-manifest.0e76738ce27dab8fe6a7708bb2ad6c05.js": "/Category-Experiment/precache-manifest.0e76738ce27dab8fe6a7708bb2ad6c05.js",
+    "service-worker.js": "/Category-Experiment/service-worker.js",
+    "static/css/main.ce3783ce.chunk.css.map": "/Category-Experiment/static/css/main.ce3783ce.chunk.css.map",
+    "static/js/2.e2cd6110.chunk.js.LICENSE.txt": "/Category-Experiment/static/js/2.e2cd6110.chunk.js.LICENSE.txt",
+    "static/media/silhouette-add.svg": "/Category-Experiment/static/media/silhouette-add.a3b286a6.svg",
+    "static/media/silhouette-remove.svg": "/Category-Experiment/static/media/silhouette-remove.db519466.svg",
+    "static/media/silhouette.svg": "/Category-Experiment/static/media/silhouette.b7f928cd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d38d131.js",
+    "static/js/2.e2cd6110.chunk.js",
+    "static/css/main.ce3783ce.chunk.css",
+    "static/js/main.6b51d94d.chunk.js"
+  ]
+}
