@@ -153,7 +153,7 @@ class Display extends React.Component {
                     if(trial + 1 === EXPLICIT_TRIALS/3){
                         let arr = this.implicitClassification1.concat(this.implicitClassification2,
                             this.explicitClassification1,this.explicitClassification2);
-                        this.props.updateResults(arr);
+                        this.props.updateResults(arr,this.islanderLogic.getDimension());
                     }
                     else{
                         this.props.updateTrial(trial + 1);

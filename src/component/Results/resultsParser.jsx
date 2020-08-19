@@ -86,20 +86,20 @@ class ResultsParser {
           </div>
           <div className="resultsParser-phase-row">
             <div className="resultsParser-result-item">
-              <h3>First Choice- Boundary</h3>
-              {this.addSilhouetteImage(boundary, exp1bound, dimension)}
-            </div>
-            <div className="resultsParser-result-item">
               <h3>First Phase- Boundary</h3>
               {this.addSilhouetteImage(boundary, p1ImplBound, dimension)}
             </div>
             <div className="resultsParser-result-item">
-              <h3>Second Choice- Boundary</h3>
-              {this.addSilhouetteImage(boundary, exp2Bound, dimension)}
-            </div>
-            <div className="resultsParser-result-item">
               <h3>Second Phase- Boundary</h3>
               {this.addSilhouetteImage(boundary, p2ImplBound, dimension)}
+            </div>
+            <div className="resultsParser-result-item">
+              <h3>First Choice- Boundary</h3>
+              {this.addSilhouetteImage(boundary, exp1bound, dimension)}
+            </div>
+            <div className="resultsParser-result-item">
+              <h3>Second Choice- Boundary</h3>
+              {this.addSilhouetteImage(boundary, exp2Bound, dimension)}
             </div>
             <div className="resultsParser-result-item">
               <h3>Boundary Average</h3>
@@ -122,12 +122,12 @@ class ResultsParser {
       ? addSilhouette : defaultSize === selectedSize ? silhouette : removeSilhouette;
 
     const size = dimension === WIDTH_MEASURE ? {
-      width: `${selectedSize / 2}vmin`,
+      width: `${selectedSize / 3}vmin`,
       height: STANDARD_HEIGHT,
     }
       : {
         width: STANDARD_WIDTH,
-        height: `${selectedSize / 2}vmin`,
+        height: `${selectedSize / 3}vmin`,
       };
 
     const dimText = dimension === WIDTH_MEASURE ? ' wide' : ' tall';
@@ -152,12 +152,12 @@ class ResultsParser {
 
   static addComparisonImage(defaultSize, dimension) {
     const avgSize = dimension === WIDTH_MEASURE ? {
-      width: `${defaultSize / 2}vmin`,
+      width: `${defaultSize / 3}vmin`,
       height: STANDARD_HEIGHT,
     }
       : {
         width: STANDARD_WIDTH,
-        height: `${defaultSize / 2}vmin`,
+        height: `${defaultSize / 3}vmin`,
       };
 
     const dimText = dimension === WIDTH_MEASURE ? ' wide' : ' tall';

@@ -81,8 +81,6 @@ class Frame extends React.Component {
                 />
                 :<Explanation 
                   stage = {stage} 
-                  typeFeedback = {typeFeedback} 
-                  amountFeedback = {amountFeedback} 
                   dimension={dimension} 
                   results={results}
                 />}

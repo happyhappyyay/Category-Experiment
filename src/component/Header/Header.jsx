@@ -4,6 +4,8 @@ import * as Phases from '../../helpers/phases.js';
 import ProgressBar from '../ProgressBar/ProgressBar.jsx';
 
 const Header = ({ stage, trial }) => {
+    const INTRODUCTION_TEXT = 'Categorization Game (Experiment)';
+    const RESULTS_TITLE = 'Results (selection/correct)';
     return(
         <div className='Header-container'>
             {stage !== Phases.INTRODUCTION &
@@ -20,7 +22,9 @@ const Header = ({ stage, trial }) => {
                     trial={trial} 
                 />
             </div>
-            :<h1>Categorization Game (Experiment)</h1>}
+            : stage === Phases.INTRODUCTION?
+                <h1>{INTRODUCTION_TEXT}</h1>
+                :<h1>{RESULTS_TITLE}</h1>}
         </div>
     );
 }

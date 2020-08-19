@@ -1,3 +1,9 @@
+h3{
+    color:gold;
+    font-size:2vmin;
+    text-align:center;
+}
+
 h2{
     margin-top:.5vmin;
     font-size: 3vmin;
@@ -6,29 +12,14 @@ h2{
     text-shadow: goldenrod 1vmin .5vmin 1vmin;
 }
 
-h3{
-    color:gold;
-    font-size:2vmin;
-    text-align:center;
-}
-
 p {
     text-align:center;
     justify-self: flex-end;
     margin:0;
 }
 
-hr{
-    margin:0 auto;
-    border: none;
-    background-color: #ccc;
-    color: #ccc;
-    height: .25vh;
-    width:80%;
-}
-
 .Results-container{
-    height:77vh;
+    height:78vh;
     background-color: rgb(30, 57, 99);
     font-size:1.5vmin;
 }
@@ -37,20 +28,22 @@ hr{
     display: flex;
     flex-direction: column;
     height: 90%;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: space-around;
+    
 }
 
 .resultsParser-phase-row{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 22%;
+    height: 26%;
 }
 
 .resultsParser-result-item{
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .flex-row{
@@ -59,5 +52,5 @@ hr{
 
 .resultsParser-silhouette{
     display:block;
-    margin: 0px auto;
+    margin: auto auto;
   }

@@ -2,14 +2,11 @@ import React from 'react';
 import './Results.css';
 import ResultsParser from './resultsParser.jsx';
 
-const Results = ({ results }) =>{
-    const RESULTS_TITLE = "Results (selection/correct)";
+const Results = ({ results, dimension }) =>{
     const parser = new ResultsParser();
-    const resultsContent = parser.parseResults(results);
+    const resultsContent = parser.parseResults(results, dimension);
     return (
         <div className="Results-container">
-            <h2>{RESULTS_TITLE}</h2>
-            <hr></hr>
             {resultsContent}
         </div>
     );

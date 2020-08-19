@@ -3,7 +3,8 @@ import { FALSE } from '../../helpers/feedback';
 class FeedbackHelper {
   constructor(feedbackAmount, feedbackType) {
     this.feedbackAmount = feedbackAmount;
-    this.feedbackType = feedbackType === 2 ? FeedbackHelper.createRandomizedFeedbackType() : feedbackType;
+    this.feedbackType = feedbackType === 2
+      ? FeedbackHelper.createRandomizedFeedbackType() : feedbackType;
     this.giveFeedback = false;
     this.color = 'black';
   }

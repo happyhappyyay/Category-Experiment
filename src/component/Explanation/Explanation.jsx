@@ -3,14 +3,12 @@ import * as Phases from '../../helpers/phases.js';
 import Introduction from '../Introduction/Introduction';
 import Results from '../Results/Results';
 
-const Explanation = ({ stage, amtFeedback, typeFeedback, dimension, results }) =>{
+const Explanation = ({ stage, dimension, results }) =>{
     return (
         <>
             {stage === Phases.INTRODUCTION? 
             <Introduction />:
             <Results 
-                amtFeedback = {amtFeedback} 
-                typeFeedback = {typeFeedback} 
                 dimension = {dimension} 
                 results = {results}
             />}

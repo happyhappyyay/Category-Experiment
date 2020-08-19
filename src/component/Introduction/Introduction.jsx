@@ -15,7 +15,9 @@ const Introduction = () => {
                 <br></br><br></br>
                 
                 Select the <mark>amount of feedback</mark> (how often you want to know if your answer was correct) and <mark>randomization of feedback </mark>
-                (mixing up true and false responses to your answers). Get your results at the end!
+                (mixing up true and false responses to your answers). Start with a training session where you get feedback. Click the island you think is correct
+                 or press a corresponding "1" or "2". Then, embark on a journey of island categorization with your selected amount and type of feedback! 
+                 Make it all the way through and you can get your results at the end!
                 <br></br><br></br><b>No information of any kind is being collected.</b>
 
             </p>
