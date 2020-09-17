@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ProgressBar.css';
 import {calculateOverallProgress, calulateCurrentProgress} from './progCalc';
 
@@ -23,5 +24,11 @@ const ProgressBar = ({overall, stage, trial}) => {
         </div>
     );
 }
+
+ProgressBar.propTypes = {
+    overall: PropTypes.bool.isRequired,
+    stage: PropTypes.oneOf([0,1,2,3,4,5,6,7]).isRequired,
+    trial: PropTypes.number.isRequired
+};
 
 export default ProgressBar;

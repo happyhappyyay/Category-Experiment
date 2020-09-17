@@ -3,6 +3,7 @@ import Island from '../Island/Island';
 import DisplayItem from '../DisplayItem/DisplayItem';
 import IslanderLogic from '../../helpers/IslanderLogic';
 import './Display.css';
+import PropTypes from 'prop-types';
 import * as Phases from '../../helpers/phases';
 import {EXPLICIT_TRIALS, PHASE_TRIALS} from '../ProgressBar/progCalc';
 import {ISLAND_1, ISLAND_2, WIDTH_MEASURE, HEIGHT_MEASURE} from '../../helpers/IslanderLogic';
@@ -202,5 +203,15 @@ class Display extends React.Component {
         );
       }
     }
+
+    Display.propTypes = {
+        stage: PropTypes.oneOf([0,1,2,3,4,5,6,7]).isRequired,
+        trial: PropTypes.number,
+        feedbackAmount: PropTypes.number.isRequired,
+        typeFeedback: PropTypes.number.isRequired,
+        updateStage: PropTypes.func.isRequired,
+        updateTrial: PropTypes.func.isRequired,
+        updateResults: PropTypes.func.isRequired
+    };
   
   export default Display;

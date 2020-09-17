@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Footer.css';
 import {INTRODUCTION, TRAINING, RESULTS} from '../../helpers/phases';
 
@@ -141,5 +142,12 @@ const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
         </div>
     );
 }
+
+Footer.propTypes = {
+    stage: PropTypes.oneOf([0,1,2,3,4,5,6,7]).isRequired,
+    typeFeedback: PropTypes.func.isRequired,
+    amtFeedback: PropTypes.func.isRequired,
+    stageChange: PropTypes.func.isRequired
+};
 
 export default Footer;

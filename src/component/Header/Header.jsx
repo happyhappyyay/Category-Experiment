@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Header.css';
 import * as Phases from '../../helpers/phases.js';
 import ProgressBar from '../ProgressBar/ProgressBar.jsx';
@@ -28,5 +29,10 @@ const Header = ({ stage, trial }) => {
         </div>
     );
 }
+
+Header.propTypes = {
+    stage: PropTypes.oneOf([0,1,2,3,4,5,6,7]).isRequired,
+    trial: PropTypes.number
+};
 
 export default Header;

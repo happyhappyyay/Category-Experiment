@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import './Island.css'
 import * as Phases from '../../helpers/phases'
 
@@ -25,5 +26,11 @@ const Island = ({ island, stage, update }) => {
         </div>
     );
 }
+
+Island.propTypes = {
+    island: PropTypes.oneOf([0,1]),
+    stage: PropTypes.oneOf([0,1,2,3,4,5,6,7]).isRequired,
+    update: PropTypes.func.isRequired
+};
 
 export default Island;

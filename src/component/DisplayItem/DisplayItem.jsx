@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './DisplayItem.css';
 import silhouette from '../../images/silhouette.svg'; 
 import {WIDTH_MEASURE, HEIGHT_MEASURE, MAX_HEIGHT, MIN_HEIGHT,
@@ -113,5 +114,12 @@ class DisplayItem extends React.Component{
         );
     }
 }
+
+DisplayItem.propTypes = {
+    stage: PropTypes.oneOf([0,1,2,3,4,5,6,7]).isRequired,
+    trial: PropTypes.number,
+    properties: PropTypes.array.isRequired,
+    update: PropTypes.func.isRequired
+};
 
 export default DisplayItem;
