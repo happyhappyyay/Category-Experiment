@@ -9,7 +9,7 @@ import {EXPLICIT_TRIALS, PHASE_TRIALS} from '../ProgressBar/progCalc';
 import {ISLAND_1, ISLAND_2, WIDTH_MEASURE, HEIGHT_MEASURE} from '../../helpers/IslanderLogic';
 import FeedbackHelper from './feedbackHelper';
 
-class Display extends React.Component {
+export default class Display extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -175,7 +175,7 @@ class Display extends React.Component {
                 <div className="Display-container">
                     <Island 
                         island={0} 
-                        stage={stage} 
+                        stage={stage}
                         update={this.updateImplicit}
                     />
                         {this.state.giveFeedback? 
@@ -213,5 +213,4 @@ class Display extends React.Component {
         updateTrial: PropTypes.func.isRequired,
         updateResults: PropTypes.func.isRequired
     };
-  
-  export default Display;
+    

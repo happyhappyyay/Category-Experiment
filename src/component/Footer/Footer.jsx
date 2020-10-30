@@ -51,7 +51,8 @@ const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
                     <input 
                         className="Footer-feedback" 
                         type="radio" 
-                        name="amount-feedback" 
+                        name="amount-feedback"
+                        data-testid="semi-supervised" 
                         value="50" 
                         onClick={sendFeedbackAmount} 
                         disabled={disableInput}
@@ -97,7 +98,8 @@ const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
                     <input 
                         className="Footer-feedback" 
                         type="radio" 
-                        name="type-feedback" 
+                        name="type-feedback"
+                        data-testid="true-feedback" 
                         value="1" 
                         onClick={sendFeedbackType} 
                         disabled={disableInput}
@@ -117,7 +119,12 @@ const Footer = ({ stage, amtFeedback, typeFeedback, stageChange }) => {
                 </form>   
             </div>
             {stage === INTRODUCTION? 
-            <div className="Footer-arrow-right" onClick={startExperiment}></div>:null}
+            <div 
+                className="Footer-arrow-right" 
+                onClick={startExperiment}
+                data-testid="start-arrow"></div>
+                :
+            null}
             {stage=== RESULTS?             
             <div className="Footer-results-legend">
                 <div 

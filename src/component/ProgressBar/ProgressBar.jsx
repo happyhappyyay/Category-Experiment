@@ -17,7 +17,7 @@ const ProgressBar = ({overall, stage, trial}) => {
     return (
         <div className="prog">
             <div className = "header-progress-text">
-                {overall === true? "Overall Progess:":"Current Progress:"}
+                {overall === true? "Overall Progress:":"Current Progress:"}
             </div> 
             {progBoxes}
             <div className="progress-percent">{prog}%</div>

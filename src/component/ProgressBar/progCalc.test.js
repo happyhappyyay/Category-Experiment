@@ -37,5 +37,7 @@ describe('Prog Calc', () => {
       .toBe(Math.round(100 * (3 / (2 * (PHASE_TRIALS / 5)))));
     expect(calulateCurrentProgress(Phases.EXPLICIT_3, 3))
       .toBe(Math.round(100 * (3 / (EXPLICIT_TRIALS / 3))));
+    expect(calulateCurrentProgress(Phases.RESULTS, 20))
+      .toBe(Math.round(100 * (20 / 1)));
   });
 });

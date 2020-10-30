@@ -105,6 +105,7 @@ class DisplayItem extends React.Component{
                     </input>
                     <button 
                         className="DisplayItem-button" 
+                        data-testid="submit-button"
                         onClick={this.onButtonClick}
                     >
                         Submit

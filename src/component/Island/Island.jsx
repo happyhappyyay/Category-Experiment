@@ -17,7 +17,8 @@ const Island = ({ island, stage, update }) => {
     return (
         <div 
             className={checkImplicit()? 
-            islandName:"Island-gone"} 
+            islandName:"Island-gone"}
+            data-testid={islandName} 
             onClick={checkImplicit()? handleClick:null}
         >
             <div className={islandName+"-text"}>

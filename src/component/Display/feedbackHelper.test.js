@@ -3,6 +3,8 @@ import * as Feedback from '../../helpers/feedback';
 
 describe('Feedback Helper', () => {
   const helper = new FeedbackHelper(Feedback.SUPERVISED, Feedback.TRUE);
+  const helper2 = new FeedbackHelper(Feedback.UNSUPERVISED, Feedback.RANDOM);
+
   it('should set constructor correctly', () => {
     expect(helper.feedbackAmount).toBe(Feedback.SUPERVISED);
     expect(helper.feedbackType).toBe(Feedback.TRUE);
@@ -38,5 +40,10 @@ describe('Feedback Helper', () => {
   it('should return true or false', () => {
     const allow = helper.allowFeedback();
     expect(allow === true || allow === false).toBeTruthy();
+  });
+
+  it('should set the constructor correctly- random', () => {
+    expect(helper2.feedbackAmount).toBe(Feedback.UNSUPERVISED);
+    expect(helper2.feedbackType).toBeLessThan(2);
   });
 });
